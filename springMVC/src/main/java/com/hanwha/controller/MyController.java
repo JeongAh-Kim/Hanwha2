@@ -34,14 +34,14 @@ public class MyController {
 
 	@RequestMapping("/404")
 	public String error404(Model model) {
-		model.addAttribute("company", "한화ICT");
+		model.addAttribute("company", "한화시스템ICT");
 		model.addAttribute("manager", "김정아");
 		return "error404";
 	}
 
 	@ExceptionHandler(Exception.class)
 	public String error500(Exception ex, Model model) {
-		model.addAttribute("company", "한화ICT");
+		model.addAttribute("company", "한화시스템ICT");
 		model.addAttribute("name", "김정아");
 		model.addAttribute("phone", "000-0000-0000");
 		model.addAttribute("errormessage", ex.getMessage());
